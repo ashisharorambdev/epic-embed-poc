@@ -1,0 +1,299 @@
+.auth-page {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.auth-card {
+  width: min(100%, 880px);
+  padding: 40px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.auth-card h1 {
+  margin: 12px 0 18px;
+}
+
+.status {
+  padding: 12px 14px;
+  border-radius: 8px;
+}
+
+.success {
+  color: #166534;
+  background: #dcfce7;
+}
+
+.error {
+  color: #991b1b;
+  background: #fee2e2;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 10px 16px;
+  margin: 24px 0;
+  text-align: left;
+}
+
+dt {
+  color: var(--text);
+  font-weight: 600;
+}
+
+dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: var(--text-h);
+}
+
+button {
+  padding: 9px 14px;
+  border: 1px solid var(--accent-border);
+  border-radius: 6px;
+  color: var(--accent);
+  background: var(--accent-bg);
+  cursor: pointer;
+  font: inherit;
+}
+
+button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.modal-backdrop {
+  position: fixed;
+  z-index: 10;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgb(0 0 0 / 45%);
+}
+
+.note-dialog {
+  width: min(100%, 540px);
+  padding: 28px;
+  border-radius: 12px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+}
+
+.note-dialog h2 {
+  margin: 0 0 16px;
+}
+
+.note-dialog label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-h);
+  font-weight: 600;
+}
+
+.note-dialog textarea {
+  width: 100%;
+  min-height: 150px;
+  margin-bottom: 16px;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-h);
+  background: var(--bg);
+  font: inherit;
+  resize: vertical;
+}
+
+.note-dialog input[type='datetime-local'] {
+  width: 100%;
+  margin: 0 0 16px;
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-h);
+  background: var(--bg);
+  font: inherit;
+}
+
+.note-error,
+.note-success {
+  margin: 0 0 16px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.note-error { color: #991b1b; background: #fee2e2; }
+.note-success { color: #166534; background: #dcfce7; }
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.secondary {
+  color: var(--text-h);
+  border-color: var(--border);
+  background: transparent;
+}
+
+.copy-error {
+  margin-top: 12px;
+  color: #991b1b;
+  font-size: 14px;
+}
+
+.fetch-status {
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.patient-data,
+.encounters,
+.launched-encounter,
+.diagnostic-reports,
+.documents {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  text-align: left;
+}
+
+.patient-data h2,
+.encounters h2,
+.launched-encounter h2,
+.diagnostic-reports h2,
+.documents h2 {
+  margin: 0 0 12px;
+  font-size: 20px;
+}
+
+.patient-name {
+  color: var(--text-h);
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.encounter-name {
+  color: var(--text-h);
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.patient-data .launched-encounter {
+  margin-top: 24px;
+}
+
+.encounters ul {
+  max-height: 420px;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+  border-top: 1px solid var(--border);
+}
+
+.diagnostic-reports ul {
+  max-height: 420px;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+  border-top: 1px solid var(--border);
+}
+
+.documents ul {
+  max-height: 420px;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  list-style: none;
+  border-top: 1px solid var(--border);
+}
+
+.encounters li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-h);
+}
+
+.diagnostic-reports li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-h);
+}
+
+.documents li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 4px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-h);
+}
+
+.diagnostic-reports strong,
+.diagnostic-reports small,
+.diagnostic-reports p,
+.documents strong,
+.documents small,
+.documents p {
+  display: block;
+}
+
+.diagnostic-reports p {
+  margin-top: 4px;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.documents p {
+  margin-top: 4px;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.encounters small {
+  flex: 0 0 auto;
+  color: var(--text);
+}
+
+.diagnostic-reports > ul > li > small {
+  flex: 0 0 auto;
+  color: var(--text);
+}
+
+.documents > ul > li > small {
+  flex: 0 0 auto;
+  color: var(--text);
+}
+
+@media (max-width: 640px) {
+  .auth-card { padding: 24px; }
+  .encounters li,
+  .diagnostic-reports li,
+  .documents li { flex-direction: column; gap: 4px; }
+}
