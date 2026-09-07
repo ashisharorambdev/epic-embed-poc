@@ -250,6 +250,7 @@ function App() {
   // }
 
   async function fetchData(session: EpicAuthSession) {
+    setWorkflowData(null);
     const patientId = session.launchPatientId || session.patient;
     if (!patientId) {
       setDataStatus("error");
@@ -300,6 +301,9 @@ function App() {
         session.workflowId,
       );
       setNoteStatus("success");
+      setTimeout(() => {
+        fetchData(session);
+      }, 1000);
       setNoteText("");
     } catch {
       setNoteStatus("error");
@@ -342,6 +346,9 @@ function App() {
         session.workflowId,
       );
       setTeleEncounterStatus("success");
+      setTimeout(() => {
+        fetchData(session);
+      }, 1000);
     } catch {
       setTeleEncounterStatus("error");
     }
